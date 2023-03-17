@@ -13,8 +13,7 @@ class CustomerOrder
             quantity = @io.gets.to_i
             @io.puts "Would you like to order another dish?"
             @another_dish = @io.gets.chomp
-            order = {dish => quantity}
-            @customer_order << order
+            @customer_order << {"Dish" => dish, "Quantity" => quantity}
         end
         return @customer_order
     end

@@ -13,7 +13,7 @@ RSpec.describe CustomerOrder do
             expect(io).to receive(:gets).and_return("No").ordered
             customer_order = CustomerOrder.new(io)
             customer_order.order_item
-            expect(customer_order.order_item).to eq [{"Chicken Fried Rice"=>1}]
+            expect(customer_order.order_item).to eq [{"Dish" => "Chicken Fried Rice", "Quantity" => 1}]
         end
         it "add multiple items to order" do
             io = double :io
@@ -33,7 +33,7 @@ RSpec.describe CustomerOrder do
             expect(io).to receive(:gets).and_return("No").ordered
             customer_order = CustomerOrder.new(io)
             customer_order.order_item
-            expect(customer_order.order_item).to eq [{"Boiled Rice"=>2}, {"Chicken Fried Rice"=>1}]
+            expect(customer_order.order_item).to eq [{"Dish" => "Boiled Rice", "Quantity"=>2}, {"Dish" => "Chicken Fried Rice", "Quantity" => 1}]
         end
     end
 end

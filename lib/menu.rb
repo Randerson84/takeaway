@@ -1,6 +1,6 @@
 class Menu
     def initialize
-        @menu =  [{"Chicken Fried Rice" => 7}, {"Boiled Rice" => 2}, {"Fried Rice" => 2.50}]
+        @menu =  [{"Dish" => "Chicken Fried Rice", "Price" => "%.2f" % 7.00}, {"Dish" => "Fried Rice", "Price" => "%.2f" % 2.50}, {"Dish" => "Boiled Rice", "Price" => "%.2f" %2.00}]
     end
     def read_menu
         return @menu
